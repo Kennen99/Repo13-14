@@ -34,15 +34,37 @@
             text-decoration: none;
             cursor: pointer;
         }
-        img:hover,
-        img:focus {
-            color: green;
+        .image {
+            position: relative;
+            width: 600px;
         }
+        .image_i {
+            display: block;
+            width:100%;
+        }
+        .image_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay:hover {
+            opacity: 1;
+        }
+
     </style>
 </head>
 <body>
 <div class="image">
-    <img id="myBtn" src="../images/img1.jpg" alt="Your shoes are untied.">
+    <img id="myBtn" class="image_i" src="../images/img1.jpg" alt="Your shoes are untied.">
+    <div class="image_overlay">
+        <div class="image_title">Marathon</div>
+    </div>
 </div>
 <div id="myModal" class="modal">
     <div class="modal-content">
