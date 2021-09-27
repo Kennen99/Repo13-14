@@ -12,33 +12,249 @@
             width: 24%;
             padding: 0.5%;
         }
-        img {
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .image {
             position: relative;
             width: 100%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            padding: 2px;
+        }
+        .image_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay:hover {
+            opacity: 0.5;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="column">
+
+<div class="column">
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img1.jpg" alt="Your shoes are untied.">
+        <div class="image_overlay">
+            <h1>Marathon</h1>>
+        </div>
+    </div>
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img5.jpg" alt="deadlift">
+        <div class="image_overlay">
+            <h1>Weight Lifting</h1>>
+        </div>
+    </div>
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img8.jpg" alt="highjump">
+        <div class="image_overlay">
+            <h1>Jogging</h1>>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img2.jpg" alt="Yoga">
+        <div class="image_overlay">
+            <h1>Gymnastics</h1>>
+        </div>
+    </div>
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img6.jpg" alt="Basketball">
+        <div class="image_overlay">
+            <h1>Basketball</h1>>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img3.jpg" alt="stairs">
+        <div class="image_overlay">
+            <h1>Climbing</h1>>
+        </div>
+    </div>
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img7.jpg" alt="Swimming">
+        <div class="image_overlay">
+            <h1>Swimming</h1>>
+        </div>
+    </div>
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img9.jpg" alt="Court">
+        <div class="image_overlay">
+            <h1>Running</h1>>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img4.jpg" alt="skyjump">
+        <div class="image_overlay">
+            <h1>Skiing</h1>>
+        </div>
+    </div>
+    <div id="myBtn" class="image">
+        <img class="image_i" src="../images/img10.jpg" alt="Bike">
+        <div class="image_overlay">
+            <h1>Cycling</h1>>
+        </div>
+    </div>
+</div>
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
         <a href="image01.html">
-            <img src="../images/img1.jpg" alt="Your shoes are untied.">
+            <p>Marathon</p>
         </a>
-        <img src="../images/img5.jpg" alt="deadlift">
-        <img src="../images/img8.jpg" alt="highjump">
     </div>
-    <div class="column">
-        <img src="../images/img2.jpg" alt="YOgA">
-        <img src="../images/img6.jpg" alt="basketball">
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image02.html">
+            <p>Gymnastics</p>
+        </a>
     </div>
-    <div class="column">
-        <img src="../images/img3.jpg" alt="feet">
-        <img src="../images/img7.jpg" alt="swimming">
-        <img src="../images/img9.jpg" alt="court">
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image03.html">
+            <p>Climbing</p>
+        </a>
     </div>
-    <div class="column">
-        <img src="../images/img4.jpg" alt="dededead">
-        <img src="../images/img10.jpg" alt="bike">
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image04.html">
+            <p>Skiing</p>
+        </a>
     </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image05.html">
+            <p>Weight Lifting</p>
+        </a>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image06.html">
+            <p>Basketball</p>
+        </a>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image07.html">
+            <p>Swimming</p>
+        </a>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image08.html">
+            <p>Jogging</p>
+        </a>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image09.html">
+            <p>Running</p>
+        </a>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="image10.html">
+            <p>Cycling</p>
+        </a>
+    </div>
+</div>
+
+
+<script>
+    var modals = document.querySelectorAll("myModal");
+    var btn = document.querySelectorAll("myBtn.modal");
+    var spans = document.getElementsByClassName("close");
+    for(var i=0; i<btn.length; i++){
+        btn[i].onclick = function(e){
+            e.preventDefault();
+            modal=document.querySelector(e.target.getAttribute("href"));
+            modal.style.display = "block";
+        }
+    }
+    for(var i=0; i<spans.length; i++){
+        spans[i].onclick = function(){
+            for(var index in modals) {
+                if(typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+            }
+        }
+    }
+    window.onclick = function(event){
+        if(event.target.classList.contains('modal')){
+            for(var index in modals){
+                if(typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+            }
+        }
+    }
+
+</script>
 
 </body>
 </html>
